@@ -1,11 +1,10 @@
-import express from 'express' //TYPE MODULE
-//const express = require("express")--> TYPE common JS
-import router from "./src/router/exercicio.js"
+import express from 'express'
+import router from "./src/router/pessoa.js"
 
-const app = express() // Inicializando o express - new
+const app = express() 
 app.use(express.json())
 
-app.use(router)
+app.use("/api", router)
 
 app.listen(3000, () =>{
     console.log("Servidor ouvindo na porta 3000")
